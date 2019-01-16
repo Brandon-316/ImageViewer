@@ -11,11 +11,13 @@ import UIKit
 
 class PhotoFilterController: UIViewController {
     
-    private lazy var filteredImages: [UIImage] = {
+    private lazy var filteredImages: [CIImage] = {
         guard let image = self.photo else { return [] }
         let filteredImageBuilder = FilteredImageBuilder(image: image)
         return filteredImageBuilder.imageWithDefaultFilters()
     }()
+    
+    let eagleContext = EAGLContext(api: .openGLES3)
     
     var photo: UIImage?
     
@@ -43,7 +45,9 @@ extension PhotoFilterController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FilteredImageCell.reuseIdentifier, for: indexPath) as! FilteredImageCell
         
-        cell.imageView.image = filteredImages[indexPath.row]
+        let image = filteredImages[indexPath.row]
+        cell.eagleContext = eagleContext
+        cell.image = image
         
         return cell
     }

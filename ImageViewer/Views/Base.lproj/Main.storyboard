@@ -132,21 +132,7 @@
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                     <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="clk-hQ-N55">
-                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="0.0"/>
-                                                        </imageView>
-                                                    </subviews>
                                                 </view>
-                                                <constraints>
-                                                    <constraint firstItem="clk-hQ-N55" firstAttribute="leading" secondItem="bZ1-we-A7h" secondAttribute="leading" id="OQJ-5e-KDs"/>
-                                                    <constraint firstAttribute="bottom" secondItem="clk-hQ-N55" secondAttribute="bottom" id="fNw-ta-Mwl"/>
-                                                    <constraint firstItem="clk-hQ-N55" firstAttribute="top" secondItem="bZ1-we-A7h" secondAttribute="top" id="pzy-VG-8l3"/>
-                                                    <constraint firstAttribute="trailing" secondItem="clk-hQ-N55" secondAttribute="trailing" id="qOH-QQ-JSC"/>
-                                                </constraints>
-                                                <connections>
-                                                    <outlet property="imageView" destination="clk-hQ-N55" id="IUh-ac-nCa"/>
-                                                </connections>
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
